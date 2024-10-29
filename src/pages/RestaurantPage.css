@@ -1,0 +1,46 @@
+.restaurant-page {
+    text-align: center;
+  }
+  
+  .scrollable-cards-container2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    color: white; 
+  }
+  
+  .scrollable-card2 {
+    width: 320px; /* Set width for the card */
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    color: white; /* Text color to contrast with background image */
+  }
+  
+  .restaurant-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for content */
+    color: white;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+  
+  .restaurant-name {
+    font-size: 1.5em;
+    margin: 0;
+  }
+
+  .h2 {
+    color: white;
+    text-align:left 
+  }
+ 
+body.dark .h2,
+body.light .h2 {
+  color: white; /* Keep text color forced to black */
+  background-color: #fff !important; /* Keep background white */
+}

@@ -1,0 +1,22 @@
+/* Center the sign-in card */
+ion-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  ion-card {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  ion-button {
+    --border-radius: 8px;
+  }
+  

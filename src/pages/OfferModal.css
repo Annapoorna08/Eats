@@ -1,0 +1,22 @@
+/* src/components/OfferModal.css */
+.close-button {
+  position: absolute;
+  top: 8px; /* Adjust top position */
+  right: 8px; /* Adjust right position */
+  width: 36px; /* Width of the round button */
+  height: 36px; /* Height of the round button */
+  border: none; /* Remove border */
+  border-radius: 50%; /* Make it round */
+  background-color: white; /* Background color */
+  color: black; /* Color of the 'X' */
+  font-size: 24px; /* Font size for the 'X' */
+  cursor: pointer; /* Cursor to indicate clickable */
+  display: flex; /* Use flexbox for centering */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: Add shadow */
+}
+
+.close-button:hover {
+  background-color: rgba(255, 0, 0, 0.1); /* Change background on hover */
+}

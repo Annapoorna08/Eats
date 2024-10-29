@@ -1,0 +1,75 @@
+.auth-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .desktop-buttons,
+  .mobile-button {
+    display: flex;
+    gap: 10px; /* Adjust the gap between buttons as needed */
+  }
+  
+  @media (max-width: 768px) {
+    .desktop-buttons {
+      display: none;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .mobile-button {
+      display: none;
+    }
+  }
+  
+  
+.search-and-select-container {
+    display: flex;
+   
+  }
+  
+  .responsive-searchbar {
+    width: auto; /* Default width */
+  }
+  
+  @media (max-width: 600px) {
+    .responsive-searchbar {
+      width: 100%; /* Full width on small screens */
+    }
+  }
+  
+  .responsive-select::part(placeholder) {
+    display: inline;
+  }
+  
+  @media (max-width: 600px) {
+    .responsive-select::part(placeholder) {
+      display: none;
+    }
+  }
+  .sign-buttons-container {
+    display: flex;
+    margin: 20px 0;
+  }
+  
+  .sign-btn {
+    flex: 1;
+    font-size: 16px;
+    padding: 10px 20px;
+    --background: #f0f0f0;
+    color: black;
+    text-transform: none; /* To match the capitalization in the uploaded image */
+    border: 1px solid transparent;
+  }
+  
+  .sign-btn.active {
+    --background: black;
+    color: white;
+    border-color: #ccc;
+  }
+  
+  .sign-btn:not(.active) {
+    --background: #e0e0e0; /* Adjust inactive background color */
+    color: black;
+  }
+  

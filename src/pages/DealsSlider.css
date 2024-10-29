@@ -1,0 +1,59 @@
+/* src/components/DealsSlider.css */
+
+.deals-slider-container {
+    padding: 10px;
+  }
+  
+  .slider-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .slider-header h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .deal-card {
+    display: flex; /* Use flexbox to align the image and text */
+    align-items: center; /* Center items vertically */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .deal-card-content {
+    display: flex;
+    align-items: center; /* Align items in the card */
+  }
+  
+  .deal-image {
+    width: 60px; /* Set the width of the image */
+    height: 60px; /* Set the height of the image */
+    border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+    margin-right: 10px; /* Add space between image and text */
+  }
+  
+  .deal-details {
+    flex: 1; /* Allow text details to take up remaining space */
+  }
+  
+  .deal-badge {
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .save-x2 {
+    background-color: #4c5fd5;
+    color: white;
+  }
+  
+  .deal-of-day {
+    background-color: #f77a6f;
+    color: white;
+  }
+  

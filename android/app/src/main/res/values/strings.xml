@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">eats</string>
+    <string name="title_activity_main">eats</string>
+    <string name="package_name">com.eats</string>
+    <string name="custom_url_scheme">com.eats</string>
+</resources>

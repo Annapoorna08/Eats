@@ -1,0 +1,34 @@
+/* Custom CSS for better mobile responsiveness */
+@media (max-width: 600px) {
+    .ion-card {
+      margin: 0; /* Remove margins for smaller devices */
+      border-radius: 10px; /* Rounded corners for aesthetics */
+    }
+  
+    .ion-card-header {
+      font-size: 1.2rem; /* Slightly larger font for headers on mobile */
+    }
+  
+    .ion-label h2 {
+      font-size: 1.1rem; /* Adjust title size for better visibility */
+    }
+  
+    .ion-button {
+      margin-bottom: 10px; /* Add spacing between buttons */
+    }
+  }
+  
+  .search-and-select-container {
+    display: flex;
+   
+  }
+  
+  .responsive-searchbar {
+    width: auto; /* Default width */
+  }
+  
+  @media (max-width: 600px) {
+    .responsive-searchbar {
+      width: 100%; /* Full width on small screens */
+    }
+  }

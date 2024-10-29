@@ -1,0 +1,18 @@
+/* For information on how to create your own theme, please see:
+http://ionicframework.com/docs/theming/ */
+/* variables.css */
+:root {
+  --ion-text-color: #000000; /* Default text color */
+    --ion-background-color: #ffffff;
+    --ion-text-color: #000000;
+  }
+  
+  [theme="dark"] {
+    --ion-background-color: #000000;
+    --ion-text-color: #ffffff;
+    --ion-icon-color: #ffffff; /* Icon color for dark mode */
+  }
+  
+  ion-button{
+    text-transform: none;
+  }

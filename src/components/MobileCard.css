@@ -1,0 +1,7 @@
+.my-card {
+    position: absolute;
+    top: 0; /* Adjust based on your needs */
+    left: 10px; /* Adjust based on your design */
+    right: 10px; /* Adjust based on your design */
+    z-index: 10; /* Ensure it's above other elements */
+  }

@@ -1,0 +1,142 @@
+.trending-header {
+    display: flex;
+    align-items: center;
+}
+
+.trending-header h1 {
+    margin-left: 8px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+.pagination-container {
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    margin: 0; /* Remove any margin */
+    padding: 10px; /* Adjust as necessary for spacing */
+  }
+  
+  .pagination-text {
+    margin: 0 10px; /* Space between buttons and text */
+    font-weight: bold;
+  }
+  .seeall-button{
+    border-radius: 80%; 
+  }
+  
+  .prev-button,
+  .next-button {
+    width: 30px; /* Adjust the width as necessary */
+    height: 30px; /* Same height for consistency */
+    border-radius: 80%; /* Circular buttons */
+    background-color: #f0f0f0; /* Light background for buttons */
+    color: black; /* Text color */
+  }
+  
+  .prev-button:disabled,
+  .next-button:disabled {
+    opacity: 0.5; /* Make disabled buttons look faded */
+  }
+  
+  /* Optional: Remove default padding and margin of IonGrid if needed */
+  ion-grid {
+    --padding-start: 0; /* Remove start padding */
+    --padding-end: 0; /* Remove end padding */
+  }
+  
+  .scrollable-cards-container {
+    color: var(--ion-text-color) !important; /* Ensures dark mode text */
+    display: flex;  /* Align items in a row */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding: 0px 0; /* Add padding to the top and bottom */
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+  }
+  
+  .scrollable-card {
+    min-width: 200px; /* Set a minimum width for cards */
+    margin-right: 0px; /* Space between cards */
+    flex: 0 0 auto; /* Prevent flex items from shrinking */
+  }
+  
+  
+  .scrollable-card2 {
+      min-width: 200px; /* Set a minimum width for cards */
+      margin-right: 0px; /* Space between cards */
+      flex: 0 0 auto; /* Prevent flex items from shrinking */
+    }
+  
+    ion-title {
+      color: var(--ion-text-color);
+    }
+  
+    h2 {
+      color: var(--ion-text-color) !important;
+    }
+  
+    p {
+      color: var(--ion-text-color) !important;
+      font-size: 16px;
+     
+    }
+    
+    ion-icon {
+      color: var(--ion-icon-color) !important;
+    }
+    
+  
+    .scrollable-cards-container2 {
+      color: var(--ion-text-color) !important; /* Ensures dark mode text */
+      display: flex;  /* Align items in a row */
+      overflow-x: auto; /* Enable horizontal scrolling */
+      padding: 0px 0; /* Add padding to the top and bottom */
+      scroll-behavior: smooth; /* Smooth scrolling effect */
+    }
+  
+    .navigation-buttons {
+      display: flex;
+      gap: 10px; /* Space between the buttons */
+    }
+  
+    .custom-dropdown  {
+      background-color: #f0f0f0;/* Button background color */
+      border-radius: 50px; /*/* Rounded on top-left and bottom-right, sharp on top-right and bottom-left */
+      border: none;
+      font-weight: bold;
+      font-size: 8px;
+      color: #000;
+      font-weight: bold;
+      text-transform: none; /* Prevent text from being capitalized */
+    }
+    
+    .custom-button {
+      width: 80px;
+      height: 40px;
+      background-color: #f0f0f0;/* Button background color */
+      border-radius: 50px; /*/* Rounded on top-left and bottom-right, sharp on top-right and bottom-left */
+      border: none;
+      font-weight: bold;
+      font-size: 8px;
+      color: #000;
+      font-weight: bold;
+      text-transform: none; /* Prevent text from being capitalized */
+    }
+    
+    .custom-button:hover {
+      color: #000;
+    }
+    
+    .card-container {
+      display: flex;
+      overflow-x: auto;
+      padding: 20px;
+      scroll-snap-type: x mandatory;
+      gap: 10px;
+    }
+    
+    .scroll-card {
+      min-width: 300px;
+      flex-shrink: 0;
+      scroll-snap-align: start;
+    }
