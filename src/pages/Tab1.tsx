@@ -1,9 +1,6 @@
 import {
   IonContent,
-  IonHeader,
   IonPage,
-  IonTitle,
-  IonToolbar,
   IonSelectOption,
   IonSelect,
   IonButton,
@@ -12,7 +9,6 @@ import {
   IonCardHeader,
   IonCardContent,
   IonCardTitle,
-  IonModal,
 } from '@ionic/react';
 import { useHistory } from 'react-router-dom';
 
@@ -26,9 +22,9 @@ import HorizontalScroll from '../components/HorizontalScroll';
 
 
 const foodOffers = [
-  { title: 'Burger King',offer: 'Buy 1, get 1 free', image: '/assets/icons/burgerking.png' },
-  { title: 'Wingstop', rating:'4.0',offer: 'Free item on $30+', image: '/assets/icons/food3.png' },
-  { title: 'Popeyes Louisiana Kitchen',rating:'4.0', offer: 'Buy 1, get 1 free', image: '/assets/icons/food4.png' },
+  { offer: '30% OFF Orders over $50', description: 'Up to $10 off with code MATES30. Valid only today' },
+  { offer: '50% OFF Orders over $70', description: 'Up to $40 off with code MATES50. Valid only today' },
+  { offer: '20% OFF Orders over $45', description: 'Up to $5 off with code MATES20. Valid only today' },
 
 ];
 
@@ -85,26 +81,13 @@ const rerestaurants_nearme = [
   { name: 'Popeyes Louisiana Kitchen', rating:'4.0',offer: 'Buy 1, get 1 free',type:'Chinese, Asian, Tibetan, Desserts', shortloc:'M G Road', image: '/assets/icons/food4.png' },
   { name: 'MR Halal WaterVliet', rating:'4.0',ffer: 'Buy 1, get 1 free', type:'Chinese, Asian, Tibetan, Desserts', shortloc:'M G Road' ,image: '/assets/icons/halal-image.jpg' },
   { name: 'Chinese Wok',rating:'4.0 (10k+) ', offer: '$4 off on $25+', type:'Chinese, Asian, Tibetan, Desserts', shortloc:'M G Road',image: 'path/to/bowledco-image.jpg' },
-  { name: 'Ophelia’s', rating:'4.0',offer: '25% off, up to $10',type:'Chinese, Asian, Tibetan, Desserts', shortloc:'M G Road', image: 'path/to/ophelias-image.jpg' },
-  { name: 'Ophelia’s', rating:'4.0',offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { name: 'Ophelia’s', rating:'4.0',offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { name: 'Ophelia’s', rating:'4.0',offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { name: 'Ophelia’s', rating:'4.0',offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { name: 'Ophelia’s', rating:'4.0',offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { name: 'Ophelia’s', rating:'4.0',offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { name: 'Ophelia’s', rating:'4.0',offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { name: 'Ophelia’s', rating:'4.0',offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { name: 'Ophelia’s', rating:'4.0',offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { name: 'Ophelia’s', offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { name: 'Ophelia’s', offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { name: 'Ophelia’s', offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
   { name: 'Ophelia’s', offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
   { name: 'Ophelia’s', offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
 ];
 
 
 
-const ITEMS_PER_PAGE = 8;
+const ITEMS_PER_PAGE = 4;
 
 const Tab1: React.FC = () => {
   const location='Kochi';
@@ -199,10 +182,10 @@ const Tab1: React.FC = () => {
 <IonCard className="scroll-card">
 
   <IonCardHeader>
-    <IonCardTitle>30% OFF Orders over $45</IonCardTitle>
+    <IonCardTitle>{foodOffers.offer}</IonCardTitle>
   </IonCardHeader>
   <IonCardContent>
-    <p>Up to $20 off with code MATES30. Valid only today!</p>
+    <p>{foodOffers.description}</p>
     <IonButton expand="block" color="primary">Order Now</IonButton>
   </IonCardContent>
 

@@ -10,7 +10,6 @@ import {
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, square, triangle } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
 import Tab3 from './pages/Tab3';
 import AddToCartPage from './pages/AddToCartPage';
@@ -58,7 +57,6 @@ const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
   
-      <IonTabs>
    
         <IonRouterOutlet>
 
@@ -96,7 +94,7 @@ const App: React.FC = () => (
           </Route>
         </IonRouterOutlet>
        
-      </IonTabs>
+
     </IonReactRouter>
   </IonApp>
 );

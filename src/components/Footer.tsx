@@ -1,6 +1,5 @@
 import React from 'react';
 import { IonFooter, IonToolbar, IonGrid, IonRow, IonCol, IonIcon } from '@ionic/react';
-import { logoLinkedin, logoFacebook, logoTwitter } from 'ionicons/icons';
 
 import './Footer.css';
 
