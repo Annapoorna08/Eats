@@ -48,6 +48,11 @@ ion-grid {
   flex: 0 0 auto; /* Prevent flex items from shrinking */
 }
 
+.text-wrap {
+  max-width: 260px;
+  overflow-wrap: break-word; /* or use word-wrap: break-word; */
+  word-break: break-all;
+}
 
 .scrollable-card2 {
     min-width: 200px; /* Set a minimum width for cards */

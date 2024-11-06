@@ -22,9 +22,9 @@ import HorizontalScroll from '../components/HorizontalScroll';
 
 
 const foodOffers = [
-  { offer: '30% OFF Orders over $50', description: 'Up to $10 off with code MATES30. Valid only today' },
-  { offer: '50% OFF Orders over $70', description: 'Up to $40 off with code MATES50. Valid only today' },
-  { offer: '20% OFF Orders over $45', description: 'Up to $5 off with code MATES20. Valid only today' },
+  { offer: 'Get 50% off', description: 'Use code EATS50 & get 50% off on orders above ₹149. Maximum discount: ₹100.' },
+  { offer: 'Get flat ₹75', description: 'Get flat ₹75 discount using RBL Bank Credit Cards Flat ₹75 discount on orders above ₹500' },
+  { offer: 'Get 20% off', description: 'Use code TRYNEW & get 20% off on orders above ₹199. Maximum discount: ₹50.' },
 
 ];
 
@@ -34,67 +34,40 @@ const spfoodOffers = [
   { title: 'Popeyes Louisiana Kitchen',rating:'4.0', offer: 'Buy 1, get 1 free', image: '/assets/icons/food4.png' },
   { title: 'MR Halal WaterVliet', rating:'4.0',offer: 'Buy 1, get 1 free', image: '/assets/icons/halal-image.jpg' },
   { title: 'Bowled Co', offer: '$4 off on $25+', image: 'path/to/bowledco-image.jpg' },
-  { title: 'Ophelia’s', offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { title: 'Ophelia’s', offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { title: 'Ophelia’s', offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { title: 'Ophelia’s', offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { title: 'Ophelia’s', offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { title: 'Ophelia’s', offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { title: 'Ophelia’s', offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { title: 'Ophelia’s', offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { title: 'Ophelia’s', offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { title: 'Ophelia’s', offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { title: 'Ophelia’s', offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { title: 'Ophelia’s', offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { title: 'Ophelia’s', offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { title: 'Ophelia’s', offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { title: 'Ophelia’s', offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
 ];
 
 
 const rerestaurants = [
-  { name: 'McDonald', rating:'4.0 (10k+) ',distance: ' 3.2 mi' ,time:'32 min' ,offer: 'Buy 1, get 1 free', type:'Chinese, Asian, Tibetan, Desserts', shortloc:'M G Road',  image: '/assets/icons/burgerking.png' },
-  { name: 'KFC', rating:'4.0',distance: ' 3.4 mi' ,time:'45 min' ,offer: 'Free item on $30+', type:'Chinese, Asian, Tibetan, Desserts', shortloc:'M G Road', image: '/assets/icons/kfc.jpg' },
-  { name: 'Popeyes Louisiana Kitchen', rating:'4.0',offer: 'Buy 1, get 1 free',type:'Chinese, Asian, Tibetan, Desserts', shortloc:'M G Road', image: '/assets/icons/food4.png' },
-  { name: 'MR Halal WaterVliet', rating:'4.0',ffer: 'Buy 1, get 1 free', type:'Chinese, Asian, Tibetan, Desserts', shortloc:'M G Road' ,image: '/assets/icons/halal-image.jpg' },
-  { name: 'Chinese Wok',rating:'4.0 (10k+) ', offer: '$4 off on $25+', type:'Chinese, Asian, Tibetan, Desserts', shortloc:'M G Road',image: 'path/to/bowledco-image.jpg' },
-  { name: 'Ophelia’s', rating:'4.0',offer: '25% off, up to $10',type:'Chinese, Asian, Tibetan, Desserts', shortloc:'M G Road', image: 'path/to/ophelias-image.jpg' },
-  { name: 'Ophelia’s', rating:'4.0',offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { name: 'Ophelia’s', rating:'4.0',offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { name: 'Ophelia’s', rating:'4.0',offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { name: 'Ophelia’s', rating:'4.0',offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { name: 'Ophelia’s', rating:'4.0',offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { name: 'Ophelia’s', rating:'4.0',offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { name: 'Ophelia’s', rating:'4.0',offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { name: 'Ophelia’s', rating:'4.0',offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { name: 'Ophelia’s', rating:'4.0',offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { name: 'Ophelia’s', offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { name: 'Ophelia’s', offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { name: 'Ophelia’s', offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { name: 'Ophelia’s', offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { name: 'Ophelia’s', offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
+  { name: 'Domino\'s Pizza', rating:'4.4 (4.2K+ ratings)',time:'25-30 mins' ,offer: '₹400 for two', type:'Pizzas', shortloc:'Kollam',  image: '/assets/Restaurant/Dominos.jpeg' },
+  { name: 'Pizza Hut', rating:'4.3 (3.2K+ ratings)',time:'25-30 mins' ,offer: '₹350 for two', type:'Pizzas', shortloc:'Kollam', image: '/assets/Restaurant/Pizza Hut.jpeg' },
+  { name: 'KFC', rating:'4.4 (12K+ ratings)',time:'25-30 mins',offer: '400 for two',type:'Burgers', shortloc:'Kollam', image: '/assets/Restaurant/KFC.jpeg' },
+  { name: 'McDonald\'s', rating:'4.0 (12K+ ratings)',time:'25-30 mins',offer: '400 for two',type:'Burgers', shortloc:'Kollam', image: '/assets/Restaurant/McDonald.jpeg' },
+  { name: 'Ramees', rating:'4.4 (29K+ ratings)',time:'30-35 mins',offer: '₹400 for two',type:'South Indian', shortloc:'Kollam', image: '/assets/Restaurant/Ramees.jpeg' },
+  { name: 'Gee Bee Restaurant', rating:'4.3 (17K+ ratings)',time:'25-30 mins',offer: '₹200 for two',type:'South Indian', shortloc:'Kollam', image: '/assets/Restaurant/Gee Bee Restaurant.jpeg' },
 ];
 
 const rerestaurants_nearme = [
-  { name: 'McDonald', rating:'4.0 (10k+) ',distance: ' 3.2 mi' ,time:'32 min' ,offer: 'Buy 1, get 1 free', type:'Chinese, Asian, Tibetan, Desserts', shortloc:'M G Road',  image: '/assets/icons/burgerking.png' },
-  { name: 'KFC', rating:'4.0',distance: ' 3.4 mi' ,time:'45 min' ,offer: 'Free item on $30+', type:'Chinese, Asian, Tibetan, Desserts', shortloc:'M G Road', image: '/assets/icons/kfc.jpg' },
-  { name: 'Popeyes Louisiana Kitchen', rating:'4.0',offer: 'Buy 1, get 1 free',type:'Chinese, Asian, Tibetan, Desserts', shortloc:'M G Road', image: '/assets/icons/food4.png' },
-  { name: 'MR Halal WaterVliet', rating:'4.0',ffer: 'Buy 1, get 1 free', type:'Chinese, Asian, Tibetan, Desserts', shortloc:'M G Road' ,image: '/assets/icons/halal-image.jpg' },
-  { name: 'Chinese Wok',rating:'4.0 (10k+) ', offer: '$4 off on $25+', type:'Chinese, Asian, Tibetan, Desserts', shortloc:'M G Road',image: 'path/to/bowledco-image.jpg' },
-  { name: 'Ophelia’s', offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-  { name: 'Ophelia’s', offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
+  { name: 'Quilon Foods', rating:'4.0 (10k+) ',distance: ' 3.2 mi' ,time:'32 min' ,offer: 'Buy 1, get 1 free', type:'Chinese, Asian, Tibetan, Desserts', shortloc:'M G Road',  image: '/assets/icons/burgerking.png' },
+  { name: 'Pizza Hut', rating:'4.0',distance: ' 3.4 mi' ,time:'45 min' ,offer: 'Free item on $30+', type:'Chinese, Asian, Tibetan, Desserts', shortloc:'M G Road', image: '/assets/icons/kfc.jpg' },
+  { name: 'KFC', rating:'4.0',offer: 'Buy 1, get 1 free',type:'Chinese, Asian, Tibetan, Desserts', shortloc:'M G Road', image: '/assets/icons/food4.png' },
+  { name: 'McDonald\'s', rating:'4.0',ffer: 'Buy 1, get 1 free', type:'Chinese, Asian, Tibetan, Desserts', shortloc:'M G Road' ,image: '/assets/icons/halal-image.jpg' },
+  { name: 'Qahwa, Karicode',rating:'4.0 (10k+) ', offer: '$4 off on $25+', type:'Chinese, Asian, Tibetan, Desserts', shortloc:'M G Road',image: 'path/to/bowledco-image.jpg' },
+  { name: 'Ramees', rating: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
+  { name: 'Gee Bee Restaurant', rating: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
 ];
 
 
 
-const ITEMS_PER_PAGE = 4;
+const ITEMS_PER_PAGE = 3;
 
 const Tab1: React.FC = () => {
-  const location='Kochi';
+  const location='Kollam';
   const history = useHistory();
   const [currentPage, setCurrentPage] = useState(0);
 
-  const totalPages = Math.ceil(spfoodOffers.length / ITEMS_PER_PAGE);
+  const totalPages_rerestaurants = Math.ceil(rerestaurants.length / ITEMS_PER_PAGE);
+
+  //const totalPages_rerestaurants = Math.ceil(rerestaurants.length / ITEMS_PER_PAGE);
 
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
@@ -109,7 +82,7 @@ const Tab1: React.FC = () => {
   }, []);
 
   const nextPage = () => {
-    if (currentPage < totalPages - 1) {
+    if (currentPage < totalPages_rerestaurants - 1) {
       setCurrentPage(currentPage + 1);
     }
   };
@@ -185,7 +158,7 @@ const Tab1: React.FC = () => {
     <IonCardTitle>{foodOffers.offer}</IonCardTitle>
   </IonCardHeader>
   <IonCardContent>
-    <p>{foodOffers.description}</p>
+    <p className="text-wrap">{foodOffers.description}</p>
     <IonButton expand="block" color="primary">Order Now</IonButton>
   </IonCardContent>
 
@@ -195,7 +168,7 @@ const Tab1: React.FC = () => {
 
 
 
-
+{/* 
 <h2>AI Sugestion Restaurant</h2> 
 <div className="pagination-container">       
        <div className="navigation-buttons">
@@ -234,6 +207,7 @@ const Tab1: React.FC = () => {
 <br></br>
 <br/>
 
+*/}
 
 <h2>Top restaurant chains in {location}</h2> 
         <div className="pagination-container">       
@@ -242,7 +216,7 @@ const Tab1: React.FC = () => {
       <IonButton className="nav-button" fill="clear" onClick={prevPage} disabled={currentPage === 0}>
         <IonIcon icon={chevronBackOutline} />
       </IonButton>
-      <IonButton className="nav-button" fill="clear" onClick={nextPage} disabled={currentPage === totalPages - 1} >
+      <IonButton className="nav-button" fill="clear" onClick={nextPage} disabled={currentPage === totalPages_rerestaurants - 1} >
         <IonIcon icon={chevronForwardOutline} />
       </IonButton>
       </div>
@@ -253,18 +227,18 @@ const Tab1: React.FC = () => {
             <IonCard key={index} className="scrollable-card2" onClick={handleClick}  button>
               <img
                 style={{
-                  height: '147px',
-                  width:'311px', // Adjust height
+                  height: '200px',
+                  width:'327px', // Adjust height
                   marginRight:'auto',
                   margin: '5 140px', // Space between logo and menu button
                
                 }}
                 src={rerestaurants.image}
-                alt={rerestaurants.distance}
+                alt={rerestaurants.name}
               />
               <IonCardContent>
               <h2><strong>{rerestaurants.name}</strong></h2>
-                <p> <IonIcon icon={star} /> {rerestaurants.rating} . {rerestaurants.distance} {rerestaurants.time}</p>
+                <p> <IonIcon icon={star} /> {rerestaurants.rating}  <b> {rerestaurants.time}</b> </p>
                 <p>{rerestaurants.type}</p>
                 <p>{rerestaurants.shortloc}</p>
               </IonCardContent>
@@ -283,7 +257,7 @@ const Tab1: React.FC = () => {
       <IonButton className="nav-button" fill="clear" onClick={prevPage} disabled={currentPage === 0}>
         <IonIcon icon={chevronBackOutline} />
       </IonButton>
-      <IonButton className="nav-button" fill="clear" onClick={nextPage} disabled={currentPage === totalPages - 1} >
+      <IonButton className="nav-button" fill="clear" onClick={nextPage} disabled={currentPage === totalPages_rerestaurants - 1} >
         <IonIcon icon={chevronForwardOutline} />
       </IonButton>
       </div>
@@ -322,7 +296,7 @@ const Tab1: React.FC = () => {
       <IonButton className="nav-button" fill="clear" onClick={prevPage} disabled={currentPage === 0}>
         <IonIcon icon={chevronBackOutline} />
       </IonButton>
-      <IonButton className="nav-button" fill="clear" onClick={nextPage} disabled={currentPage === totalPages - 1} >
+      <IonButton className="nav-button" fill="clear" onClick={nextPage} disabled={currentPage === totalPages_rerestaurants - 1} >
         <IonIcon icon={chevronForwardOutline} />
       </IonButton>
       </div>
