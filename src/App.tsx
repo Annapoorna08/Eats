@@ -17,6 +17,7 @@ import AutocompleteSearch from './components/helpers/AutocompleteSearch';
 import CardView from './pages/CardView';
 import CustomerPage from './pages/CustomerPage'
 import MenuPage from './pages/MenuPage'
+import Register from './pages/Register';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -73,6 +74,12 @@ const App: React.FC = () => (
           </Route>  
           <Route exact path="/AutocompleteSearch">
           <AutocompleteSearch />
+          </Route>
+
+
+
+          <Route exact path="/Register">
+          <Register />
           </Route>
 
           <Route exact path="/CustomerPage">

@@ -1,0 +1,89 @@
+/* App.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+  }
+  
+  .header {
+    background-image: url('/path/to/your/image.jpg'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .header-content h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin: 0;
+  }
+  
+  .header-content p {
+    font-size: 1.2rem;
+    color: #fff;
+  }
+  
+  .get-started-card {
+    max-width: 400px;
+    margin: -30px auto 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .input-box {
+    margin-top: 10px;
+  }
+  
+  .steps-section h3, .steps-section h4 {
+    text-align: center;
+    color: #333;
+  }
+  
+  .steps-section .step {
+    background: #f0f0f0;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .step span {
+    font-weight: bold;
+    color: #6c63ff;
+  }
+  
+  .document-card {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .document-card h4 {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .document-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .document-list li {
+    margin: 8px 0;
+  }
+  
+  .document-list a {
+    color: #ff6f00;
+    text-decoration: none;
+  }
+  
+  .document-list a:hover {
+    text-decoration: underline;
+  }
+  

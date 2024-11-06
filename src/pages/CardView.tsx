@@ -1,5 +1,4 @@
 import { IonContent,IonCardContent,IonCard,IonButton,IonIcon, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
 import './CardView.css';
 import Header from '../components/Header'
 import Footertag from '../components/Footer'
