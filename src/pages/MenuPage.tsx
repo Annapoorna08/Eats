@@ -1,16 +1,42 @@
-import React, { useState } from 'react';
+
 import { IonPage, IonContent,IonCard, IonIcon, IonSearchbar, IonToggle,IonLabel,IonButton,IonCardHeader,IonCardTitle,IonCardContent } from '@ionic/react';
 import DealsSlider from './DealsSlider'
 import Header from '../components/Header' 
 import Footertag from '../components/Footer'
 import { star, locationOutline, timeOutline } from 'ionicons/icons';
 import RestaurantPage from './RestaurantPage';
-
+import { setName, checkName, removeName } from '../components/utils/preferencesUtil'; 
+import React, { useEffect, useState } from 'react';
 import './MenuPage.css';
-const MenuPage = () => {
+import { useLocation } from 'react-router-dom';
+
+interface Restaurant {
+  name: string;
+  rating: number;
+  distance: string;
+  time: string;
+  type: string;
+  shortloc: string;
+  image: string;
+}
+
+interface LocationState {
+  restaurant: Restaurant;
+}
+
+const MenuPage: React.FC = () => {
 
   const [isnonVeg, setIsnonVeg] = useState(false);
   const [isVeg, setIsVeg] = useState(false);
+  const location = useLocation<LocationState>(); // Tell TypeScript about the type of location.state
+  const restaurant = location.state?.restaurant;
+  
+  const [restname, setRestName] = useState<string | null>(null);
+
+  const getRestName = async () => {
+    const fetchedName = await checkName('rest_name');
+    setRestName(fetchedName);
+  };
 
   const handleToggleChange = (event: CustomEvent) => {
     setIsVeg(event.detail.checked);
@@ -21,30 +47,36 @@ const MenuPage = () => {
     setIsBestseller(!isBestseller); // Toggle the Bestseller state
   };
 
+  useEffect(() => {
+    getRestName();
+  }, []);
 
+  
 
-  const rerestaurants_near_me = [
-    { name: 'McDonald', rating:'4.0 (10k+) ',distance: ' 3.2 mi' ,time:'32 min' ,offer: 'Buy 1, get 1 free', type:'Chinese, Asian, Tibetan, Desserts', shortloc:'M G Road',  image: '/assets/icons/burgerking.png' },
-    { name: 'KFC', rating:'4.0',distance: ' 3.4 mi' ,time:'45 min' ,offer: 'Free item on $30+', type:'Chinese, Asian, Tibetan, Desserts', shortloc:'M G Road', image: '/assets/icons/kfc.jpg' },
-    { name: 'Popeyes Louisiana Kitchen', rating:'4.0',offer: 'Buy 1, get 1 free',type:'Chinese, Asian, Tibetan, Desserts', shortloc:'M G Road', image: '/assets/icons/food4.png' },
-    { name: 'MR Halal WaterVliet', rating:'4.0',ffer: 'Buy 1, get 1 free', type:'Chinese, Asian, Tibetan, Desserts', shortloc:'M G Road' ,image: '/assets/icons/halal-image.jpg' },
-    { name: 'Chinese Wok',rating:'4.0 (10k+) ', offer: '$4 off on $25+', type:'Chinese, Asian, Tibetan, Desserts', shortloc:'M G Road',image: 'path/to/bowledco-image.jpg' },
-    { name: 'Ophelia’s', rating:'4.0',offer: '25% off, up to $10',type:'Chinese, Asian, Tibetan, Desserts', shortloc:'M G Road', image: 'path/to/ophelias-image.jpg' },
-    { name: 'Ophelia’s', rating:'4.0',offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-    { name: 'Ophelia’s', rating:'4.0',offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-    { name: 'Ophelia’s', rating:'4.0',offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-    { name: 'Ophelia’s', rating:'4.0',offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-    { name: 'Ophelia’s', rating:'4.0',offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-    { name: 'Ophelia’s', rating:'4.0',offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-    { name: 'Ophelia’s', rating:'4.0',offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-    { name: 'Ophelia’s', rating:'4.0',offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-    { name: 'Ophelia’s', rating:'4.0',offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-    { name: 'Ophelia’s', offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-    { name: 'Ophelia’s', offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-    { name: 'Ophelia’s', offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-    { name: 'Ophelia’s', offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
-    { name: 'Ophelia’s', offer: '25% off, up to $10', image: 'path/to/ophelias-image.jpg' },
+  
+
+  const restaurants_near_me: Restaurant[] = [
+    {
+      name: "Domino's Pizza",
+      rating: 4.2,
+      distance: "1.2 km",
+      time: "10 mins",
+      type: "Fast Food",
+      shortloc: "Downtown",
+      image: "/assets/Restaurant/Dominos.jpeg",
+    },
+    {
+      name: "Starbucks",
+      rating: 4.5,
+      distance: "0.5 km",
+      time: "5 mins",
+      type: "Coffee",
+      shortloc: "City Center",
+      image: "/assets/Restaurant/Dominos.jpeg",
+    },
+    // Add more restaurants as needed
   ];
+  
   
 
   return (
@@ -55,32 +87,32 @@ const MenuPage = () => {
       <div className="restaurant-card-container">
           <IonCard className="restaurant-card">
             {/* Restaurant Name */}
-            <h2>KFC</h2>
+            <h2>{restaurant.name}</h2>
             
             {/* Restaurant Info */}
             <div className="restaurant-info">
               <div className="rating">
                 <IonIcon icon={star} />
-                <span>4.3 (8.2K+ ratings)</span>
+                <span>{restaurant.rating}</span>
               </div>
               <span className="price">₹400 for two</span>
             </div>
 
             {/* Tags */}
             <div className="tags">
-              <a href="#">Burgers</a>, <a href="#">Fast Food</a>
+              <a href="#"> {restaurant.type}</a>
             </div>
 
             {/* Outlet and Delivery Info */}
             <div className="outlet-info">
               <div className="location">
                 <IonIcon icon={locationOutline} />
-                <span>Outlet</span>
-                <span className="outlet-name">Kannur</span>
+                <span>Outlet</span>&nbsp;
+                <span className="outlet-name">{restaurant.shortloc}</span>
               </div>
               <div className="delivery-time">
                 <IonIcon icon={timeOutline} />
-                <span>40-45 mins</span>
+                <span>{restaurant.time}</span>
               </div>
             </div>
           </IonCard>
@@ -102,7 +134,7 @@ const MenuPage = () => {
           <IonButton className={`bestseller-button ${isBestseller ? 'active' : ''}`}  onClick={handleButtonClick} >Bestseller</IonButton>
           </div>
 
-          <RestaurantPage title="Top Picks" restaurants={rerestaurants_near_me} />
+          <RestaurantPage title="Top Picks" restaurants={restaurants_near_me} />
 
         
 
