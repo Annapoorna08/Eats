@@ -1,0 +1,97 @@
+/* Background */
+.colorful-background {
+    background: linear-gradient(135deg, #ff9a8b, #ff6a88, #ff99ac);
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  /* Modern Card Styles */
+  .modern-card {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Profile Card */
+  .profile-name {
+    font-size: 26px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 10px;
+  }
+  
+  .profile-details {
+    margin: 5px 0;
+    color: #555;
+  }
+  
+  .edit-profile-button {
+    margin-top: 15px;
+    font-weight: bold;
+  }
+  
+  /* Section Title */
+  .section-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #444;
+  }
+  
+  /* Order Card */
+  .order-card {
+    margin-bottom: 15px;
+    padding: 15px;
+    border: 1px solid #f0f0f0;
+    border-radius: 10px;
+    background: #f9f9f9;
+  }
+  
+  .order-item {
+    background: none;
+    --inner-border-width: 0px;
+    padding: 0;
+  }
+  
+  .restaurant-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .order-location,
+  .order-price,
+  .order-details,
+  .order-time {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+  }
+  
+  .order-rating {
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .delivery-status-icon {
+    font-size: 20px;
+  }
+  
+  /* Buttons */
+  .action-button {
+    flex: 1;
+    margin: 0 5px;
+    --border-radius: 8px;
+    font-size: 14px;
+  }
+  
+  .order-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  

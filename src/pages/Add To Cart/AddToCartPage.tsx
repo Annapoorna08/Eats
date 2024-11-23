@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonItem, IonLabel, IonText, IonCard, IonCardHeader, IonCardContent, IonGrid, IonRow, IonCol ,IonList,IonCheckbox} from '@ionic/react';
-import Header from '../components/Header'
+import Header from '../../components/MainComponent/Header'
 
 import './AddToCartPage.css'
 

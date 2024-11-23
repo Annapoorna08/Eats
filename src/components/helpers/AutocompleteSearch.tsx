@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { IonSearchbar, IonList, IonItem } from '@ionic/react';
 import { getCurrentLocation } from './locationService';
 import { locationOutline } from 'ionicons/icons';
-import '../Header.css'; // Import the CSS file
+
+import { setName, checkName, removeName } from '../utils/preferencesUtil'; 
 
 const AutocompleteSearch: React.FC = () => {
   const [autocompleteService, setAutocompleteService] = useState<google.maps.places.AutocompleteService | null>(null);
@@ -20,6 +21,10 @@ const AutocompleteSearch: React.FC = () => {
       setPlacesService(placesServiceInstance);
     }
   }, []);
+
+  const saveName = async (location: string) => {
+    await setName('location',location);
+  };
 
   // Update predictions based on search input
   const handleSearch = (query: string) => {
@@ -50,6 +55,8 @@ const AutocompleteSearch: React.FC = () => {
         const longName = addressComponents && addressComponents.length > 0
           ? addressComponents[0].long_name
           : '';
+
+          saveName(longName);
 
           setSearchText(`${longName} ${description}`); // Set the search box value to the selected description
           setPredictions([]); // Clear the predictions to close the dropdown

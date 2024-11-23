@@ -1,4 +1,6 @@
 import { Redirect, Route } from 'react-router-dom';
+import { useStatus,StatusProvider } from './components/context/StatusContext';
+
 import {
   IonApp,
   IonIcon,
@@ -10,14 +12,15 @@ import {
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import Tab1 from './pages/Tab1';
-import Tab3 from './pages/Tab3';
-import AddToCartPage from './pages/AddToCartPage';
+import Home from './pages/Home /Home';
+
+import AddToCartPage from './pages/Add To Cart/AddToCartPage';
 import AutocompleteSearch from './components/helpers/AutocompleteSearch';
-import CardView from './pages/CardView';
+import CardView from './pages/Topbar/CardView';
 import CustomerPage from './pages/CustomerPage'
-import MenuPage from './pages/MenuPage'
-import Register from './pages/Register';
+import Makeorder from './pages/Make order/Makeorder'
+import ProfileCard from './pages/UserProfie/ProfileCard'
+
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -54,17 +57,21 @@ import './theme/variables.css';
 
 setupIonicReact();
 
-const App: React.FC = () => (
+const App: React.FC = () => {
+
+  return (
   <IonApp>
     <IonReactRouter>
   
    
         <IonRouterOutlet>
 
-        <Route exact path="/MenuPage">
-            <MenuPage />
-          </Route>          
+        <Route exact path="/Makeorder">
+         <Makeorder />
+        </Route> 
+
           
+                  
           <Route exact path="/AddToCartPage">
             <AddToCartPage />
           </Route>     
@@ -76,34 +83,39 @@ const App: React.FC = () => (
           <AutocompleteSearch />
           </Route>
 
-
-
-          <Route exact path="/Register">
-          <Register />
+          <Route exact path="/ProfileCard">
+          <ProfileCard />
           </Route>
+
+
+
+          
 
           <Route exact path="/CustomerPage">
           <CustomerPage />
           </Route>
       
       
-          <Route exact path="/tab1">
-            <Tab1 />
+          <Route exact path="/Home">
+            <Home />
           </Route>
           <Route exact path="/CardView">
             <CardView />
           </Route>
-          <Route path="/tab3">
-            <Tab3 />
-          </Route>
+
           <Route exact path="/">
-            <Redirect to="/tab1" />
+            <Redirect to="/Home" />
           </Route>
         </IonRouterOutlet>
-       
-
     </IonReactRouter>
   </IonApp>
+ );
+};
+
+const WrappedApp: React.FC = () => (
+  <StatusProvider>
+    <App />
+  </StatusProvider>
 );
 
-export default App;
+export default WrappedApp;

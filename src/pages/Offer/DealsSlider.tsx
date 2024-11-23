@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.css'; // Import Swiper styles
 import { IonCard, IonCardContent, IonIcon } from '@ionic/react';
 import './DealsSlider.css'; // Custom styles for your slider
-import OfferModal from './OfferModal'; // Import the modal component
+import OfferModal from '../OfferModel/OfferModal';
 
 const DealsSlider: React.FC = () => {
 
